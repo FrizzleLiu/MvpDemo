@@ -10,10 +10,10 @@ import com.test.mvpdemo.bean.BaseBean;
 public interface LoginContract {
     interface Model {
         //Model层完成具体业务的接口  BaseModel子类完成具体实现
-     void executeLogin(String account,String password) throws Exception;
+        void executeLogin(String account, String password) throws Exception;
     }
 
-    interface View<T extends BaseBean>{
+    interface View<T extends BaseBean> {
         //用泛型就不需要强转了,泛型的好处
         //项目中一般是json解析的javabean
         void handleResult(T t);
@@ -21,7 +21,7 @@ public interface LoginContract {
 
     interface Presenter<T extends BaseBean> {
         //1.接收到View层的登录指令,可以自己处理,也可以交给 Model层处理
-        void requestLogin(String account,String password);
+        void requestLogin(String account, String password);
 
         //2.接收到Model层处理结果,通知View层刷新
         void responseResult(T t);

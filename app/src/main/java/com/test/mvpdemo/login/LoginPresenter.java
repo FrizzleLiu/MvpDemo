@@ -19,7 +19,7 @@ public class LoginPresenter extends BasePresenter<LoginActivity, LoginModel, Log
             public void requestLogin(String account, String password) {
                 try {
                     //1.P层可以不做事,只做转发,很多项目的写法都是这样的
-                    getModel().getContract().executeLogin(account,password);
+                    getModel().getContract().executeLogin(account, password);
 
                     //2.P层处理,google的demo是这种方式
                     //具体业务逻辑实现,如登录请求等

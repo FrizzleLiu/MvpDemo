@@ -5,7 +5,7 @@ import java.lang.ref.WeakReference;
 /**
  * desc   : BasePresenter
  */
-public abstract class BasePresenter<V extends BaseView , M extends BaseModel, CONTRACT> {
+public abstract class BasePresenter<V extends BaseView, M extends BaseModel, CONTRACT> {
     //M层
     protected M m;
     //V层  弱引用
@@ -16,7 +16,7 @@ public abstract class BasePresenter<V extends BaseView , M extends BaseModel, CO
      *          弱引用防止内存泄漏
      */
     public void bindView(V v) {
-        vWeakReference=new WeakReference<>(v);
+        vWeakReference = new WeakReference<>(v);
     }
 
 
@@ -24,18 +24,18 @@ public abstract class BasePresenter<V extends BaseView , M extends BaseModel, CO
      * @return 获取V层对象
      * 从弱引用中拿
      */
-    public V getView(){
-     if (vWeakReference!=null) {
-         return vWeakReference.get();
-     }
-     return null;
+    public V getView() {
+        if (vWeakReference != null) {
+            return vWeakReference.get();
+        }
+        return null;
     }
 
     /**
      * 解绑View
      */
     public void unBindeView() {
-        if (vWeakReference!=null) {
+        if (vWeakReference != null) {
             vWeakReference.clear();
             vWeakReference = null;
             System.gc();

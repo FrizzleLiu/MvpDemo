@@ -7,7 +7,7 @@ import com.test.mvpdemo.bean.UserInfo;
  * desc   : LoginModel
  * 接收P层需要做的业务
  */
-public class LoginModel extends BaseModel<LoginPresenter,LoginContract.Model> {
+public class LoginModel extends BaseModel<LoginPresenter, LoginContract.Model> {
 
     public LoginModel(LoginPresenter loginPresenter) {
         super(loginPresenter);

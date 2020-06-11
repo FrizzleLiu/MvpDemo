@@ -48,9 +48,9 @@ public class LoginActivity extends BaseView<LoginPresenter, LoginContract.View> 
             @Override
             public void handleResult(UserInfo userInfo) {
                 if (userInfo != null) {
-                    Toast.makeText(LoginActivity.this,userInfo.toString(),Toast.LENGTH_SHORT).show();
-                }else {
-                    Toast.makeText(LoginActivity.this,"登录失败~",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, userInfo.toString(), Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(LoginActivity.this, "登录失败~", Toast.LENGTH_SHORT).show();
                 }
             }
         };
@@ -58,12 +58,12 @@ public class LoginActivity extends BaseView<LoginPresenter, LoginContract.View> 
 
     @Override
     public LoginPresenter getPresenter() {
-        return new LoginPresenter() ;
+        return new LoginPresenter();
     }
 
     private void requestLogin() {
         String account = mEtAccount.getText().toString().trim();
         String password = mEtPassword.getText().toString().trim();
-        p.getContract().requestLogin(account,password);
+        p.getContract().requestLogin(account, password);
     }
 }

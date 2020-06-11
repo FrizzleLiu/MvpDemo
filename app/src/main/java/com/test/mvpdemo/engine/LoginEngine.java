@@ -4,9 +4,6 @@ import com.test.mvpdemo.bean.UserInfo;
 import com.test.mvpdemo.login.LoginPresenter;
 
 /**
- * author : LiuWeiJun
- * e-mail : 463866506@qq.com
- * date   : 2020/6/10 20:14
  * desc   : LoginEngine
  */
 public class LoginEngine<P extends LoginPresenter> {
